@@ -7,4 +7,4 @@ def islower(c):
             else:
                 continue
             return False
-    return False
+    return
