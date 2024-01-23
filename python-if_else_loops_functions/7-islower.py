@@ -7,4 +7,5 @@ def islower(c):
             else:
                 continue
             return False
-    return
+    else:
+        print(Traceback (most recent call last):)
