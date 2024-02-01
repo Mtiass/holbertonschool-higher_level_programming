@@ -49,7 +49,7 @@ class Square:
         This is a public instance method to calculate the area of a square.
         """
 
-        sqarea = self.__size ** 2
+        sqarea = self.__size * self.__size
         return (sqarea)
 
     def my_print(self):
