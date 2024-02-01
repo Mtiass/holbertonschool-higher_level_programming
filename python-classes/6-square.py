@@ -39,7 +39,7 @@ class Square:
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         for con in value:
-            if not isinstance(i, int) or i < 0:
+            if not isinstance(con, int) or i < 0:
                 raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
