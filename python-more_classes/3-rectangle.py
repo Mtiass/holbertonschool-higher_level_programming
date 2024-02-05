@@ -32,10 +32,10 @@ class Rectangle:
 
     def __str__(self):
 
-        if self.__width == 0 or self.__height == 0:
-            return ("")
-
         string = ""
+        if self.__width == 0 or self.__height == 0:
+            return (string)
+
         for row in range(self.__height):
             for column in range(self.__width):
                 string += "#"
@@ -44,10 +44,6 @@ class Rectangle:
         return (string)
 
     def __repr__(self):
-
-        if self.__width == 0 or self.__height == 0:
-            return ("")
-
         mod = self.__module__
         clname = self.__class__.__name__
         return ("<{}.{} obect at {}>".format(mod, clname, hex(id(self))))
