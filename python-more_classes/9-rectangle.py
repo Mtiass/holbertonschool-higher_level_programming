@@ -152,4 +152,5 @@ class Rectangle:
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
+            cls.size = size
             return (cls(size, size))
