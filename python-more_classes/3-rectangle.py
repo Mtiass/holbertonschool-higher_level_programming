@@ -30,24 +30,6 @@ class Rectangle:
         self.__height = height
         self.__width = width
 
-    def __str__(self):
-
-        string = ""
-        if self.__width == 0 or self.__height == 0:
-            return (string)
-
-        for row in range(self.__height):
-            for column in range(self.__width):
-                string += "#"
-            if row < self.__height - 1:
-                string += '\n'
-        return (string)
-
-    def __repr__(self):
-        mod = self.__module__
-        clname = self.__class__.__name__
-        return ("<{}.{} obect at {}>".format(mod, clname, hex(id(self))))
-
     @property
     def width(self):
         return (self.__width)
@@ -91,3 +73,20 @@ class Rectangle:
 
         perimeter = 2 * (self.__height + self.__width)
         return (perimeter)
+
+    def __str__(self):
+        string = ""
+        if self.__width == 0 or self.__height == 0:
+            return (string)
+
+        for row in range(self.__height):
+            for column in range(self.__width):
+                string += "#"
+            if row < self.__height - 1:
+                string += '\n'
+        return (string)
+
+    def __repr__(self):
+        mod = self.__module__
+        clname = self.__class__.__name__
+        return ("<{}.{} object at {}>".format(mod, clname, hex(id(self))))
