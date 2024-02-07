@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines a function write_file.
+This module defines a function called write_file.
 """
 
 
