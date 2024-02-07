@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-Rectangle = __import__('9-rectangle').Rectangle
 """
 This module defines Square as a class inherited from Rectangle.
 """
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -28,7 +28,7 @@ class Square(Rectangle):
         """
 
         return (self.__size * self.__size)
-    
+
     def __str__(self):
         """
         This is a method that returns a human-readable string,
