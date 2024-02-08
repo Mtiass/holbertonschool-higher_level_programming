@@ -16,4 +16,3 @@ class MyList(list):
         """
 
         print(sorted(self))
-        return (sorted(self))
