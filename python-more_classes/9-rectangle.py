@@ -147,4 +147,4 @@ class Rectangle:
         with the same size of width and height.
         """
 
-    return cls(size, size)
+        return cls(size, size)
