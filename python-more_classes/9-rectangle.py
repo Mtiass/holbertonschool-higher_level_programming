@@ -146,10 +146,4 @@ class Rectangle:
         This is a class method which returns a new Rectangle instance
         with the same size of width and height.
         """
-
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            return (Rectangle(size, size))
+        return (Rectangle(size, size))
