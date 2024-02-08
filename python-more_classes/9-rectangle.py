@@ -146,4 +146,5 @@ class Rectangle:
         This is a class method which returns a new Rectangle instance
         with the same size of width and height.
         """
-        return (Rectangle(size, size))
+
+    return cls(size, size)
