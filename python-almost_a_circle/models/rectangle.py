@@ -101,7 +101,7 @@ class Rectangle(Base):
         """
         if not isinstance(x, int):
             raise TypeError("x must be an integer")
-        elif x < 0:
+        if x < 0:
             raise ValueError("x must be > 0")
         self.__x = x
 
@@ -135,11 +135,52 @@ class Rectangle(Base):
         Public method that print in stdout the Rectangle
         instance with '#'.
         """
-        string = ""
-        print_symbol = '#'
+        print('\n' * self.__y, end='')
         for row in range(self.__height):
-            for column in range(self.__width):
-                string += str(print_symbol)
-                if row < self.__height - 1:
-                    string += '\n'
-        print(string)
+            print(' ' * self.__x, end='')
+            print('#' * self.__width)
+
+    def __str__(self):
+        """
+        This is a method that returns a human-readable string,
+        that is a representation of the object.
+        It generates output for end user.
+        """
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height))
+
+    def update(self, *args, **kwargs):
+        """
+        This is a public method that assigns an argument to each
+        attribute.
+        """
+        if args:
+            if len(args) > 0:
+                self.id = args[0]
+            if len(args) > 1:
+                self.width = args[1]
+            if len(args) > 2:
+                self.height = args[2]
+            if len(args) > 3:
+                self.x = args[3]
+            if len(args) > 4:
+                self.y = args[4]
+        elif kwargs:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        """
+        Public method that returns the dictionary representation
+        of a Rectangle.
+        """
+        rdict = {}
+        rdict[id]
