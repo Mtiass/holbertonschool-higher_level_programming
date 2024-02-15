@@ -47,8 +47,8 @@ class Base:
         if list_objs is None:
             list_objs = []
         list_objs = []
-        for object in list_objs:
-            objdic = object.to_dictionary()
+        for obj in list_objs:
+            objdic = obj.to_dictionary()
             list_objs.append(objdic)
         flname = cls.__name__ + '.json'
         with open(flname, 'w', encoding="utf-8") as file:
