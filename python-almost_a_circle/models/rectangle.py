@@ -182,5 +182,11 @@ class Rectangle(Base):
         Public method that returns the dictionary representation
         of a Rectangle.
         """
-        rdict = {}
-        rdict[id]
+        rdict = {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+            }
+        return rdict
