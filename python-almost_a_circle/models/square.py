@@ -8,7 +8,7 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """
     This is a class that defines Square, that inherits from Rectangle
-    
+
     Attributes:
         width: is a private instance attribute,
         represents the square's size.
