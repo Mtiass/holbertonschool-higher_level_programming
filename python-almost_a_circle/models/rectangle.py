@@ -111,7 +111,6 @@ class Rectangle(Base):
         Method that retrieves y.
         """
         return self.__y
-        
     @y.setter
     def y(self, y):
         """
@@ -129,24 +128,20 @@ class Rectangle(Base):
         returns the Rectangle's area.
         """
         area = self.__height * self.__width
-        return (area)
+        return area
 
     def display(self):
         """
         Public method that print in stdout the Rectangle
         instance with '#'.
         """
-    string = ""
-    if self.__width == 0 or self.__height == 0:
+        string = ""
+        if self.__width == 0 or self.__height == 0:
+            return string
+        print_symbol = '#'
+        for row in range(self.__height):
+            for column in range(self.__width):
+                string += str(print_symbol)
+                if row < self.__height - 1:
+                    string += '\n'
         return string
-
-    print_symbol = '#'
-
-    for row in range(self.__height):
-        for column in range(self.__width):
-            string += str(print_symbol)
-        if row < self.__height - 1:
-            string += '\n'
-    return string
-
-    
