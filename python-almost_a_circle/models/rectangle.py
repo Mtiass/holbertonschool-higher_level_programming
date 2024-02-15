@@ -144,4 +144,4 @@ class Rectangle(Base):
                 string += str(print_symbol)
                 if row < self.__height - 1:
                     string += '\n'
-        return string
+        print(string)
