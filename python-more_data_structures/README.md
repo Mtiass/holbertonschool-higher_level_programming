@@ -90,11 +90,13 @@ the *lambda* keyword. It can take any number of arguments but can only have one 
 ```
 square = lambda x: x**2
 print(square(5))  # Output:  25
-Map, Reduce, and Filter Functions
-map(): Applies a function to all items in an input list.
-reduce(): Applies a binary function (a function that takes two arguments) to all items in an input list in a cumulative way.
-filter(): Constructs an iterator from elements of an iterable for which a function returns true.
 ```
+
+### Map, Reduce, and Filter Functions
+
+- **map()**: Applies a function to all items in an input list.
+- **reduce()**: Applies a binary function (a function that takes two arguments) to all items in an input list in a cumulative way.
+- **filter()**: Constructs an iterator from elements of an iterable for which a function returns true.
 
 Example using **map()**:
 ```
