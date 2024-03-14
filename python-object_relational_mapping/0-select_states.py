@@ -9,7 +9,9 @@ if __name__ == '__main__':
         port=3306, user=argv[1], passwd=argv[2],
         db=argv[3], host="localhost")
     cursor = con.cursor()
-    ns = cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     statesr = cursor.fetchall()
     for state in statesr:
         print(state)
+    cursor.close()
+    con.close()
