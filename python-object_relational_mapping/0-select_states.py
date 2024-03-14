@@ -5,13 +5,13 @@ if __name__ == '__main__':
     import sys
     import MySQLdb
 
-    try:
-        con = MySQLdb.connect(host='localhost', port=3306, user=sys.argv[1],
-                            passwd=sys.argv[2], db=sys.argv[3], charset='utf8')
-        cursor = con.cursor()
-        statesr = cursor.fetchall()
-        cursor.execute("SELECT * FROM states ORDER BY id ASC")
-        for state in statesr:
-            print(state)
-    except IndexError:
-        print("IndexError")
+    con = MySQLdb.connect(
+        port=3306, user=sys.argv[1], passwd=sys.argv[2],
+        db=sys.argv[3], host="localhost")
+    cursor = con.cursor()
+    statesr = cursor.fetchall()
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    for state in statesr:
+        print(state)
+    cursor.close()
+    con.close()
