@@ -17,4 +17,4 @@ if __name__ == '__main__':
         cursor.close()
         con.close()
     except Exception as N:
-        print("ERROR: {}".format(N))    
+        print("ERROR: {}".format(N)) 
