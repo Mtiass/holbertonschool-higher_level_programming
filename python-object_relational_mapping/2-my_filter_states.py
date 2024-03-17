@@ -12,7 +12,7 @@ if __name__ == '__main__':
             port=3306, user=argv[1], passwd=argv[2],
             db=argv[3], host="localhost")
     cursor = con.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = '{}'\
+    cursor.execute("SELECT * FROM states WHERE name COLLATE utf8_bin = '{}'\
             ORDER BY id ASC".format(argv[4]))
     for state in cursor.fetchall():
         print(state)
