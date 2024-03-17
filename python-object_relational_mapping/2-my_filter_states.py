@@ -15,6 +15,7 @@ if __name__ == '__main__':
     cursor.execute("SELECT * FROM states WHERE name = '{}'\
             ORDER BY id ASC".format(argv[4]))
     for state in cursor.fetchall():
-        print(state)
+        if state[1] == argv[4]:
+            print(state)
     cursor.close()
     con.close()
